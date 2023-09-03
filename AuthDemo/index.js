@@ -38,6 +38,12 @@ app.post('/register', async (req, res) => {
 
 })
 
+app.get('/login', (req, res) => {
+    res.render('login')
+})
+app.post('/login', (req, res) => {
+    const { username, password } = req.body;
+})
 
 app.get('/secret', (req, res) => {
     res.send('This is secret! You cannot see ME unless you are Logged In!')
